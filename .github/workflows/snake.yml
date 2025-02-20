@@ -66,11 +66,12 @@ jobs:
 
           outputs: |
 
-             dist/github-snake.svg?color_snake=#FFD700  # Altın rengi
-             
-             dist/github-snake-dark.svg?palette=github-dark&color_snake=#FFD700  # Dark mode için de altın rengi
+             dist/github-snake.svg?color_snake=#000000  # Siyah yılan
             
-             dist/ocean.gif?color_snake=#FFD700&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+             dist/github-snake-dark.svg?palette=github-dark&color_snake=#000000  # Koyu tema için de siyah yılan
+            
+             dist/ocean.gif?color_snake=#000000&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+
         env:
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

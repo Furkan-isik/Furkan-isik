@@ -1,33 +1,31 @@
-name: GitHub Progress Bar
+name: GitHub Commit Progress Bar
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # Her gün gece 12'de çalışacak
   workflow_dispatch:
   push:
     branches:
       - main
 
 jobs:
-  generate:
+  generate-progress-bar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Generate Progress Bar
-        uses: Platane/snk@v3
+        uses: jasonlong/gh-progress-bar@v1
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/progress-bar.svg?goal=1000&color=#4CAF50
+          username: ${{ github.repository_owner }}
+          goal: 1000  # Hedef commit sayısı
+          width: 50  # Çubuğun genişliği
+          color: "#4CAF50"  # Yeşil renk
+          output: "dist/progress-bar.svg"
 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy to Output Branch
+      - name: Deploy Progress Bar
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -66,7 +66,7 @@ jobs:
 
           outputs: |
 
-            dist/github-snake.svg?color_snake=red
+            dist/github-snake.svg?color_snake=#ff5733
 
             dist/github-snake-dark.svg?palette=github-dark
 

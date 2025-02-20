@@ -1,0 +1,32 @@
+name: GitHub Contribution Maze
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Her gece çalışır
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-maze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub Contribution Maze
+        uses: jasonlong/github-maze@v1
+        with:
+          username: ${{ github.repository_owner }}
+          output: "dist/github-maze.svg"
+          style: "emoji"  # Nokta yerine emoji kullanır (alternatif: "classic" veya "dots")
+
+      - name: Deploy GitHub Maze
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          commit_message: "Update GitHub Maze [skip ci]"

@@ -11,3 +11,6 @@
 
 ![snake gif](https://github.com/Furkan-isik/Furkan-isik/blob/output/github-snake.svg) 
 
+# 🌀 My GitHub Contribution Maze
+
+![Maze](https://github.com/Furkan-isik/Furkan-isik/blob/output/github-maze.svg)

@@ -9,4 +9,4 @@
 **isikfurkan981@gmail.com**
 
 
-![snake gif](https://github.com/Furkan-isik/Furkan-isik/blob/output/github-snake-light.svg)
+![snake gif](https://github.com/Furkan-isik/Furkan-isik/blob/output/github-snake-dark.svg)

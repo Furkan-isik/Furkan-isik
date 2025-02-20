@@ -8,10 +8,10 @@
 
 **isikfurkan981@gmail.com**
 
+![Progress](https://github.com/Furkan-isik/Furkan-isik/blob/output/progress-bar.svg)
 
 ![snake gif](https://github.com/Furkan-isik/Furkan-isik/blob/output/github-snake.svg)
+ 
 
-# 📊 My GitHub Contribution Progress
 
-![Progress](https://github.com/Furkan-isik/Furkan-isik/blob/output/progress-bar.svg)
 

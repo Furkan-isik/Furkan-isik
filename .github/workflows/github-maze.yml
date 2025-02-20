@@ -1,8 +1,6 @@
 name: GitHub Contribution Maze
 
-on:
-  schedule:
-    - cron: "0 0 * * *"  # Her gece çalışır
+on: 
   workflow_dispatch:
   push:
     branches:
